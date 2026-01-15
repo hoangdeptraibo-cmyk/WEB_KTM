@@ -15,53 +15,51 @@ body {
     gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
-    align-items: flex-start; /* Quan trọng: Giúp cột trái không bị dài ra */
 }
 
-.left-column {
-    flex: 30%;
-    background-color: white;
+.left-column { flex: 30%; }
+.right-column { flex: 70%; }
+
+.section {
+    background-color: #ffffff;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
-.right-column {
-    flex: 70%;
-    background-color: white;
-    padding: 20px;
-}
-
-/* Chỉnh các ô ảnh */
 .image-box, .main-image {
     width: 100%;
-    margin: 10px 0;
-    padding: 5px 10px;
+    padding: 10px;
     display: flex;
-    align-items: flex-start; /* Chữ Image nằm trên */
-    justify-content: flex-start; /* Chữ Image nằm bên trái */
+    align-items: flex-start;
+    justify-content: flex-start;
     background-size: cover;
     background-position: center;
-    color: white;
-    text-shadow: 1px 1px 2px black;
-    font-weight: bold;
+    background-color: #aaaaaa;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px #000000;
 }
 
-.image-box {
-    height: 100px;
-}
-
-.main-image {
-    height: 300px;
-}
-
-/* Gán ảnh */
+/* 3 boxes on the left */
+.image-box { height: 100px; margin: 10px 0; }
 .box-left-1 { background-image: url('anh2.jpg'); }
 .box-left-2 { background-image: url('anh3.jpg'); }
 .box-left-3 { background-image: url('anh4.jpg'); }
-.main-image { background-image: url('anh1.jpg'); }
 
-h2 { margin-top: 20px; font-size: 24px; }
+/* Large box on the right */
+.main-image {
+    height: 300px;
+    margin: 15px 0;
+    background-image: url('anh1.jpg');
+}
+
+.image-box span, .main-image span {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h2 { margin-top: 20px; font-size: 24px; text-transform: uppercase; }
 h4 { margin: 15px 0 5px 0; }
-p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
+p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; color: #333333; }
 
 @media screen and (max-width: 700px) {
     .container { flex-direction: column; }
