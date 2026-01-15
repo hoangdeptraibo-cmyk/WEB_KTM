@@ -7,85 +7,62 @@
 
 body {
     background-color: #f1f1f1;
-    padding: 40px 20px;
+    padding: 20px;
 }
 
 .container {
     display: flex;
-    gap: 30px;
-    max-width: 1100px;
+    gap: 20px;
+    max-width: 1200px;
     margin: 0 auto;
-    align-items: flex-start; /* Giúp cột trái không bị kéo dài bất thường */
+    align-items: flex-start; /* Quan trọng: Giúp cột trái không bị dài ra */
 }
 
-/* Cot ben trai */
 .left-column {
     flex: 30%;
+    background-color: white;
+    padding: 20px;
 }
 
-/* Cot ben phai */
 .right-column {
     flex: 70%;
+    background-color: white;
+    padding: 20px;
 }
 
-.section {
-    background-color: #ffffff;
-    padding: 25px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-/* Chinh cac o anh */
+/* Chỉnh các ô ảnh */
 .image-box, .main-image {
     width: 100%;
-    margin: 15px 0;
-    padding: 10px;
+    margin: 10px 0;
+    padding: 5px 10px;
     display: flex;
-    align-items: flex-start; /* Chu Image nam o tren */
-    justify-content: flex-start; /* Chu Image nam ben trai */
+    align-items: flex-start; /* Chữ Image nằm trên */
+    justify-content: flex-start; /* Chữ Image nằm bên trái */
     background-size: cover;
     background-position: center;
-    background-color: #ddd;
-    color: #ffffff;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    color: white;
+    text-shadow: 1px 1px 2px black;
     font-weight: bold;
-    font-size: 14px;
 }
 
 .image-box {
-    height: 120px; /* Tang chieu cao de anh tru tuong hien ro hon */
+    height: 100px;
 }
 
-/* Gan dung anh cho tung o */
+.main-image {
+    height: 300px;
+}
+
+/* Gán ảnh */
 .box-left-1 { background-image: url('anh2.jpg'); }
 .box-left-2 { background-image: url('anh3.jpg'); }
 .box-left-3 { background-image: url('anh4.jpg'); }
+.main-image { background-image: url('anh1.jpg'); }
 
-.main-image {
-    height: 350px;
-    background-image: url('anh1.jpg');
-}
+h2 { margin-top: 20px; font-size: 24px; }
+h4 { margin: 15px 0 5px 0; }
+p { font-size: 14px; line-height: 1.6; margin-bottom: 15px; }
 
-/* Noi dung van ban */
-h2 {
-    margin: 20px 0 5px 0;
-    font-size: 26px;
-    color: #000;
-}
-
-h4 {
-    margin: 20px 0 10px 0;
-}
-
-p {
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-/* Responsive cho dien thoai */
-@media screen and (max-width: 800px) {
-    .container {
-        flex-direction: column;
-    }
+@media screen and (max-width: 700px) {
+    .container { flex-direction: column; }
 }
