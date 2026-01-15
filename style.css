@@ -10,60 +10,80 @@ body {
     padding: 20px;
 }
 
-.header {
-    padding: 30px;
-    text-align: center;
-    background: white;
-    margin-bottom: 20px;
-}
-
 .container {
     display: flex;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.left-column { flex: 30%; }
-.right-column { flex: 70%; }
+.left-column {
+    flex: 30%;
+}
+
+.right-column {
+    flex: 70%;
+}
 
 .section {
     background-color: white;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
+/* Image boxes on the left */
 .image-box {
     width: 100%;
     height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
     margin: 10px 0;
-    font-weight: bold;
+    padding: 5px 10px;
+    display: flex;
+    align-items: flex-start; /* Align text to top */
+    justify-content: flex-start; /* Align text to left */
 }
 
-/* Colors for the 3 boxes on the left */
-.box-1 { background-color: #e74c3c; }
-.box-2 { background-color: #3498db; }
-.box-3 { background-color: #2ecc71; }
+.image-box span, .main-image span {
+    font-size: 14px;
+}
 
-/* Large gray box on the right for image */
+.box-1 { background-color: #e74c3c; color: white; }
+.box-2 { background-color: #3498db; color: white; }
+.box-3 { background-color: #2ecc71; color: white; }
+
+/* Main image on the right */
 .main-image {
     background-color: #aaaaaa;
     background-image: url('anh1.jpg');
     background-size: cover;
     background-position: center;
     width: 100%;
-    height: 300px;
+    height: 250px;
+    margin: 15px 0;
+    padding: 10px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px;
+    align-items: flex-start; /* Align text to top */
+    justify-content: flex-start; /* Align text to left */
     color: #333;
 }
 
-h4 { margin: 15px 0 5px 0; }
-p { font-size: 14px; line-height: 1.5; margin-bottom: 10px; }
+h2 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+h4 {
+    margin: 15px 0 5px 0;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    color: #333;
+}
 
 @media screen and (max-width: 700px) {
-    .container { flex-direction: column; }
+    .container {
+        flex-direction: column;
+    }
 }
